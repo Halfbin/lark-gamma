@@ -1,0 +1,30 @@
+name:                 Lark
+version:              0.1.0.0
+license:              BSD3
+license-file:         LICENSE
+author:               Rk
+build-type:           Simple
+extra-source-files:   ChangeLog.md
+cabal-version:        >=1.10
+
+executable lark
+  hs-source-dirs: src
+  main-is:        Main.hs
+
+  other-modules:  Lark.AST
+               ,  Lark.Eval
+               ,  Lark.Infer
+               ,  Lark.Lex
+               ,  Lark.Parse
+               ,  Lark.Parser
+               ,  Lark.Token
+               ,  Lark.Type
+
+  build-depends:  base           == 4.9.*
+               ,  mtl            == 2.2.*
+               ,  lens           == 4.*
+
+  default-language:   Haskell2010
+  default-extensions: NoMonomorphismRestriction MonoLocalBinds
+  ghc-options:        -Wall -fno-warn-name-shadowing -threaded
+
